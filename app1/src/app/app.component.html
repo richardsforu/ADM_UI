@@ -1,0 +1,21 @@
+<div class="alert alert-info text-center">
+ <h1>{{title}}</h1>
+ <button class="btn btn-primary" (click)="greet()">Greet</button>
+ <hr/>
+ <h2>Child Msg: {{childMsg}}</h2>
+</div>
+
+
+<input type="checkbox" (click)="changeStatus()">Show/Hide
+<h1>{{showInfo}}</h1>
+<div [hidden]="showInfo" >
+  <h1>Information</h1>
+</div>
+
+
+<hr/>
+
+<app-greet [msg]=greetings (cData)="test($event)">
+
+</app-greet>
+
